@@ -1,0 +1,24 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.chart, .bin {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+.chart {
+  width: 100%;
+  height: 20em;
+  position: relative;
+}
+
+.bin {
+  position: absolute;
+  bottom:0;
+  background: black;
+}
