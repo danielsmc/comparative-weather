@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -21,4 +22,5 @@ html {
   position: absolute;
   bottom:0;
   background: black;
+  color: white;
 }
