@@ -69,14 +69,16 @@ $(function(){
     var binWidth = 100/(maxTemp+1-minTemp);
     var maxPop = bins.pluck(1).max();
     $chart = $(".chart")
-    bins.forEach(function(b) {
+    bins.reverse().forEach(function(b) {
       $('<div class="bin">')
         .css({
           width: 1.01*binWidth+"%;",
-          height: 100*b[1]/maxPop + "%",
-          left: (b[0]-minTemp)*binWidth + "%"
+          height: 20*b[1]/maxPop + "em",
+          left: (b[0]-minTemp)*binWidth + "%",
+          'line-height': (2*20*b[1]/maxPop-1) + "em"
         })
         .attr('id','bin-'+b[0])
+        .html((b[0]%10==0&&2*20*b[1]/maxPop>1)?b[0]:"")
         .appendTo($chart);
     }).value() //need this value() because forEach is lazy
   })
